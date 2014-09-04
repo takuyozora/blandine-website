@@ -1,0 +1,42 @@
+/*CSS pour la page de contact*/
+
+/*POSITIONNEMENT !*/
+
+#cadre_contact {
+	padding-top: 15px;
+	width: 750px;
+	margin: auto;
+}
+
+#cadre_contact img.photo{
+	float: left;
+	margin-right: 15px;
+}
+
+#cadre_contact .cadre_infos{
+	min-height: 250px;
+	padding-top: 1px;
+	/*background-color: red;*/
+}
+
+.cadre_infos h2{
+	font-size: 250%;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+.cadre_infos ul {
+	list-style-type: none;
+	margin-left: 60px;
+}
+
+.cadre_infos ul li .categorie{
+	font-size: 150%;
+	font-style: italic;
+	margin-left: 65px;
+	color: #755514;
+}
+
+.cadre_infos ul li ul li{
+	margin-left: 135px;
+}

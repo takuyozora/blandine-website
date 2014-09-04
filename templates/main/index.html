@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+{% load staticfiles %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static "main/css/cadre-stage.css" %}" media="screen" />
+{% endblock %}
+
+
+{% block page %}
+<div style="height: 2000px;" >
+{% for stage in stages %}
+	<h2> Derniers stages proposés </h2>
+	{% include "main/cadre-stage.html" %}
+{% empty %}
+{% endfor %}
+	</div>
+{% endblock %}

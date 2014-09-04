@@ -1,0 +1,108 @@
+/*
+Fichier CSS pévu pour les effets ou le contenu particulier
+*/
+
+
+/*POSITION*/
+
+#contenu #hebdo{
+	width:600px;
+	margin: auto;
+}
+
+#contenu #hebdo table, #contenu #hedo .horaire{
+	width: 600px;
+}
+
+#contenu #hebdo td a{
+	text-decoration: none;
+}
+
+#contenu #hebdo table{
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	border-collapse:collapse;
+	position: relative;
+	left: -1px;
+	/*border-spacing: 0px;*/
+}
+
+#contenu #hebdo tr{
+	
+	width: 100%;
+	text-align: center;
+}
+
+#contenu #hebdo td{
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+#contenu #hebdo td a{
+	display: inline-block;
+	background-color: #d9c8a5;
+	/*padding: 1px 1px 0px 1px;*/
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	/*padding: 1px 1px 0px 1px;*/
+	border-bottom: 1px solid black;
+	width: 100%;
+}
+
+
+/*#contenu #hebdo td #selected-day{
+	background-color: #00FF55;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: none; 
+	position: relative;
+	padding: 0;
+	padding: 0px 0px 1px 0px;
+}*/
+#contenu #hebdo td a:focus, #contenu #hebdo td a.jour-affiche{
+	background-color: #ffecc2;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: none; 
+	position: relative;
+	padding: 0;
+	padding: 0px 0px 1px 0px;
+}
+
+#contenu #hebdo td a:hover{
+	background-color: #ffecc2;
+}
+
+#contenu #hebdo .horaire{
+	background-color: #ffecc2;
+	border-top: none;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	padding-right: 0px;
+	padding-left: 0px;
+	position: relative;
+	left: -1px;
+	width: 600px;
+}
+
+#hebdo ul{
+	margin-top: 0px;
+	padding-top: 10px;
+}
+
+#hebdo ul li.complet:after{
+	content: "Complet";
+	margin-left: 10px;
+	position: relative;
+	bottom: 2px;
+	padding-bottom: 5px;
+	font-size: 80%;
+	font-weight: bold;
+	color: red;
+}

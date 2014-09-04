@@ -1,0 +1,35 @@
+{% extends "main/base.html" %}
+
+{% load staticfiles %}
+{% block extra_css %}
+	<link rel="stylesheet" type="text/css" href="{% static "main/css/contact.css" %}" media="screen" />
+{% endblock %}
+
+{% block page %}
+{#	<h1> Contact </h1>#}
+{#	<p>Pour toutes demandes ou pour prendre rendez-vous, vous pouvez me contacter par les moyens suivants :#}
+{#		<ul>#}
+{#			<li>Téléphone : <!-- TODO  mettre une image téléphone --></li>#}
+{#			<li>Courriel  : <!-- TODO mettre une image mail --></li>#}
+{#		</ul>#}
+{#	</p>#}
+	<div id="cadre_contact">
+		<img class="photo" src="{% static "main/img/blandine+halo_200_fond.jpg" %}" alt="Blandine Radisson" />
+		<div class="cadre_infos">
+			<h2>Blandine Radisson</h2>
+			<ul>
+				<li> <span class="categorie" >Téléphone</span>
+					<ul>
+						<li> +33 (0)6 35 31 83 43 </li>
+						<li> +33 (0)4 XX XX XX XX </li>
+					</ul>
+				</li>
+				<li> <span class="categorie" >Courriel</span>
+					<ul>
+						<li> blandine.radisson@free.fr </li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}

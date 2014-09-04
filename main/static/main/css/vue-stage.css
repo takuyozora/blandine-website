@@ -1,0 +1,188 @@
+/*CSS décrivant le style des cadres de stage*/
+
+/*POSITIONNEMENT*/
+
+div #retour_stages{
+	position: relative;
+	right: 35px;
+	text-align: right;
+	width: 100%;
+	margin-top: 5px;
+}
+
+div .cadre_stage{
+	min-height: 300px;
+	margin-top: 25px;
+}
+
+div .cadre_stage .cadre_etat{
+	position: relative;
+	top: -10px;
+	left: -215px;
+	display: inline-block;
+}
+
+div .cadre_etat div{
+	float: left;
+	padding: 3px;
+	margin-right: 10px;
+}
+
+div .cadre_stage .cadre_disciplines{
+	float: right;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+div .cadre_disciplines img{
+	width: 32px;
+	height: 32px;
+	margin-left: 3px;
+}
+
+div .cadre_stage .cadre_contenu{
+	margin-top: -15px;
+}
+
+div .cadre_stage .cadre_entete {
+	/*padding: 10px;*/
+	width: 700px;
+	margin: auto;
+	/*padding-bottom: 25px;*/
+}
+
+div .cadre_stage .cadre_entete .end{
+	clear: both;
+	margin-bottom: 15px;
+}
+
+div .cadre_stage .cadre_photo{
+	float: left;
+	height: 125px;
+	width: 150px;
+	padding: 10px;
+	background-image: url("/static/main/img/effects/blur_img_150x125.png");
+	background-position: center;
+	/*border: 1px solid red;*/
+	text-align: center;
+	margin-right: 10px;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+div .cadre_photo img{
+	height: 125px;
+	width: 150px;
+}
+
+div .cadre_stage .cadre_infos{
+	margin-top: -10px;
+	padding-top: 5px;
+	position: relative;
+	text-align: right;
+}
+
+div .cadre_stage .cadre_infos h2{
+	/*padding-left: 20px;*/
+	position: relative;
+	text-align: left;
+	left: 20px;
+	margin-right: 30px;
+}
+
+div .cadre_infos .cadre_dates, div .cadre_infos .cadre_prix{
+	position: relative;
+	right: 10px;
+	display: inline-block;
+	margin-top: 5px;
+	padding: 3px;
+}
+
+div .date_stage{
+	margin-bottom: 3px;
+	display: block;
+	margin-right: 5px;
+}
+
+div .prix_stage{
+	margin-bottom: 3px;
+	display: block;
+	margin-right: 5px;
+}
+
+div .cadre_stage .cadre_resume{
+	margin-top: 10px;
+	padding: 8px;
+	position: relative;
+}
+
+div .cadre_stage .cadre_savoirplus{
+	position: relative;
+	right: 35px;
+	text-align: right;
+	width: 100%;
+	margin-top: 5px;
+}
+
+/*DESCRIPTION (position)*/
+div #description{
+	width: 600px;
+	margin: auto;
+}
+
+
+/**/
+/* COULEURS et STYLES */
+/**/
+
+
+
+div .cadre_stage{
+	/*background-color: #FFECC2;*/
+}
+
+div .cadre_stage .cadre_etat div{
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	font-weight: bold;
+}
+div .cadre_etat .annule, div .cadre_etat .complet{
+	color: red;
+
+}
+div .cadre_etat .confirme{
+	color: green;
+}
+
+
+div .cadre_disciplines img{
+	/*border: 1px solid #000000;*/
+	background-image: url("../img/effects/blur_logo_32x32.png");
+	padding: 3px;
+}
+
+div .cadre_stage .cadre_entete{
+	background-color: #FFECC2;
+}
+
+div .cadre_stage .cadre_infos h2{
+	font-weight: bold;
+	font-size: 200%;
+}
+
+div .cadre_infos .cadre_dates, div .cadre_infos .cadre_prix{
+	/*background-color: #FFF5E0;*/
+	/*text-align: left;*/
+}
+
+.date_stage{
+	/*font-weight: bold;*/
+	text-decoration: underline;
+	text-align: right;
+}
+
+.prix_stage{
+	/*font-weight: bold;*/
+	text-decoration: underline;
+	text-align: right;
+}

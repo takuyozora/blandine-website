@@ -1,0 +1,82 @@
+{% load staticfiles %}
+{% block htmltop %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+{% endblock %}
+{% block head %}
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>
+			Aux Jardins Fleuris
+		</title>
+		<!-- La feuille de styles "base.css" doit être appelée en premier. -->
+		<link rel="stylesheet" type="text/css" href="{%  static "main/css/base.css" %}" media="all" />
+		<link rel="stylesheet" type="text/css" href="{%  static "main/css/template.css" %}" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{%  static "main/css/effect.css" %}" media="screen" />
+		{% block extra_css %}{% endblock %}
+
+		<!-- Javascript -->
+		<script src="{%  static "main/js/jquery.min.js"%}"></script>
+		<script src="{% static "main/js/hebdo.js"%}"></script>
+		{% block extra_js %}{% endblock %}
+	</head>
+{%  endblock %}
+
+{% block body %}
+<body>
+<div id="global">
+{% block header %}
+	<div id="fixed">
+	{% block pagetitle %}
+		<div id="entete">
+			<h1>
+
+			</h1>
+			<p class="sous-titre">
+
+			</p>
+		</div>
+	{% endblock %}
+	{% block menu %}
+		<div id="navigation">
+			<table>
+				<tr>
+					<td><a href="/">Accueil</a></td>
+					<td><a href="/symbiotonie">Symbiotonie</a></td>
+					<td><a href="/pyscotherapie">Psychothérapie</a></td>
+					<td><a href="/contact">Contact</a></td>
+					<td><a href="/stages" class="stage">Stages</a></td>
+				</tr>
+			</table>
+		</div><!-- #navigation -->
+	{% endblock %}
+	</div>
+{% endblock %}
+{% block content %}
+	<div id="contenu">
+	{% block page %}{% endblock %}
+	</div><!-- #contenu -->
+{% endblock %}
+
+{% block footer %}
+	<div id="pied">
+		<p>
+			Ce site présente les différentes méthodologies proposées par Blandine Radisson.
+		</p>
+		<p id="copyright">
+			Site web créé par Olivier Radisson <br />
+			Adapté d'une mise en page &copy; 2008
+			<a href="http://www.elephorm.com">Elephorm</a> et
+			<a href="http://www.alsacreations.com">Alsacréations</a>
+		</p>
+	<a href="/admin" >Administrer</a>
+	</div><!-- #pied -->
+{% endblock %}
+</div><!-- #global -->
+
+</body>
+{% endblock %}
+{% block htmlbottom %}
+</html>
+{%  endblock %}

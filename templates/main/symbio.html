@@ -1,0 +1,36 @@
+{% extends "main/base.html" %}
+
+{% block page %}
+<h1>Symbiotonie</h1>
+
+	<div id="hebdo">
+			<h2> Les horaires </h2>
+			<table>
+				<tr>
+				{% for day in groupes %}
+					{% cycle "Lundi" "Mardi" "Mercredi" "Jeudi" "Vendredi" "Samedi" "Dimanche" as Day silent %}
+					{% ifnotequal day|length 0 %}
+						<td><a href="#{{ Day }}">{{ Day }}</a></td>
+					{%  endifnotequal %}
+				{% endfor %}
+				</tr>
+
+				</tr>
+			</table>
+			<div class="horaire">
+			{% for day in groupes %}
+				{% cycle "Lundi" "Mardi" "Mercredi" "Jeudi" "Vendredi" "Samedi" "Dimanche" as Day silent %}
+				{% ifnotequal day|length 0 %}
+					<h3 class="ie-support" style="padding-left: 15px;">Le {{ Day }}</h3>
+				<span  id="{{ Day }}-anchor">
+					<ul>
+						{% for groupe in day %}
+							<li {%  if groupe.isFull %}class="complet"{%  endif  %}>De {{ groupe.start|date:"H\hi" }} à {{ groupe.end|date:"H\hi" }}</li>
+						{% endfor %}
+					</ul>
+				</span>
+				{%  endifnotequal %}
+			{% endfor %}
+			</div>
+		</div>
+{% endblock %}

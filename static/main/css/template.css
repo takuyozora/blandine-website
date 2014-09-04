@@ -1,0 +1,283 @@
+/* ==============================================
+   FEUILLE DE STYLES DES GABARITS HTML/CSS --- 03
+   © Elephorm & Alsacreations.com
+   Conditions d'utilisation:
+   http://creativecommons.org/licenses/by/2.0/fr/
+   ============================================== */
+
+
+/* --- COULEURS --- */
+
+/* Note: vous pouvez modifier simplement l'aspect de ce gabarit en modifiant
+   uniquement les couleurs de fond (propriétés background) et les couleurs
+   du texte (propriété color).
+   Pour modifier la disposition des blocs, voir plus bas dans la feuille de
+   styles la partie «positionnement». */
+
+/* Général */
+html {
+
+}
+body {
+	color: #F0E39E;
+	background-color: #fff7e7;
+	background-image: url("/static/main/img/fond-creme2.jpg");
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+a {
+	color: #FF6533;
+}
+a:hover, a:focus {
+	color: #FF4C00;
+}
+strong {
+	color: #A1B55D;
+}
+
+/* En tête */
+#entete{
+	/*background: #181A12;*/
+	background-image: url("/static/main/img/bande-claire.jpg");
+	background-position: top;
+	height: 125px;
+}
+
+#entete h1{
+	margin-top: 10px;
+	margin-left: -300px;
+}
+#entete .sous-titre{
+	color: #EBD2A2;
+}
+
+/* Page */
+#global {
+	/*background: #181A12;*/
+}
+
+/* Navigation */
+#navigation {
+	/*background: #191913;*/
+	display: block;
+	width: 100%;
+	background-color: #eae2d0;
+}
+#navigation .stage{
+	/*background-color: #ebd2a2;*/
+	color: #315b99;
+	font-weight: bold;
+	border-left: 2px solid #ffffff;
+	/*border-right: 2px solid white;*/
+	/*margin-left: -5px;*/
+	/*padding-right: 2px;*/
+}
+#navigation a {
+	color: #000000;
+	font-weight: bold;
+}
+#navigation a:hover, #navigation a:focus {
+	/*background: #000000;*/
+	background: #f7efdc;
+}
+#navigation a.stage:hover, #navigation a.stage:focus {
+	background-color: #ebd2a2;
+	/*background: #000000;*/
+}
+
+/* Contenu principal */
+#contenu {
+	color: #363B29;
+	background: #fff7e7;
+}
+#contenu a {
+	color: #332510;
+}
+#contenu a:hover, #contenu a:focus {
+	color: #6E5122;
+}
+#contenu strong {
+	color: #181A12;
+}
+
+/* Pied de page */
+#pied {
+	color: #303620;
+	margin-bottom: 200px;
+}
+
+
+/* --- POSITIONNEMENT --- */
+
+/* Page */
+html, body {
+	height: 100%; /* Voir -> Note 1 ci-dessous */
+}
+body {
+	padding: 0;
+}
+#global {
+	min-height: 100%; /* -> 1 */
+	width: 850px;
+	overflow: hidden; /* -> 2 */
+	margin-left: auto;
+	margin-right: auto; /* -> 3 */
+}
+
+/* En-tête */
+#entete {
+	padding: 15px 20px 10px 20px;
+	text-align: center;
+}
+#entete h1 {
+
+}
+#entete h1 img {
+	float: left;
+	margin: 7px 20px 10px 0;
+}
+#entete .sous-titre{
+	margin: -5px 575px 0px 0px;
+	margin: -20px 0px 15px -50px;
+	font-size: 180%;
+	font-family: sans-serif;
+	font-style: normal;
+}
+
+/* Menu de navigation */
+#navigation {
+	/*padding: 12px 15px;*/
+	margin-bottom: 25px;
+	padding: 0px;
+}
+#navigation table {
+	margin: 0;
+	padding: 0;
+	/*table-layout: fixed;*/
+	border-collapse:collapse;
+	border: none;
+	width: 100%;
+}
+#navigation tr{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#navigation td {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	border:none;
+}
+#navigation a {
+	padding: 5px 0px 5px 0px;
+	margin: 0;
+	display: inline-block;
+	line-height: 1.5;
+	height: 100%;
+	font-size: 0.9em;
+	text-decoration: none;
+	width: 100%;
+}
+
+/*
+#navigation {
+	
+	margin-bottom: 25px;
+	padding: 0px;
+}
+#navigation ul {
+	margin: 0;
+	list-style: none;
+	width: 100%;
+ 	display: table;
+	table-layout: fixed;
+}
+#navigation li {
+	display: table-cell;
+	width: auto;
+	text-align: center;
+}
+#navigation a {
+	padding: 5px 0px 5px 0px;
+	display: inline-block;
+	line-height: 1.5;
+	height: 100%;
+	font-size: 0.9em;
+	text-decoration: none;
+	width: 100%;
+}*/
+
+
+
+/* Fixed */
+#fixed{
+	position: fixed;
+	z-index: 100;
+	width: 850px;
+}
+
+/* Contenu */
+#contenu {
+	margin-top:215px;
+	padding: 10px 20px;
+	padding-bottom: 25px;
+}
+#contenu > :first-child {
+	margin-top: 10px;
+}
+#contenu p, #contenu li {
+	line-height: 1.5;
+}
+
+/* Pied de page */
+#pied {
+	padding: 15px 20px;
+	font-size: .85em;
+}
+#pied p {
+	margin: .5em 0;
+}
+#copyright {
+	text-align: left;
+	font-size: 1em;
+}
+
+
+/* --- NOTES ---
+
+1.	Pour pouvoir utiliser une hauteur (height) ou une hauteur minimale
+	(min-height) sur un bloc, il faut que sont parent direct ait lui-même une
+	hauteur déterminée (donc toute valeur de height sauf "auto": hauteur en
+	pixels, em, autres unités...).
+	Si la hauteur du parent est en pourcentage, elle se réfère alors à la
+	hauteur du «grand-père», et ainsi de suite.
+	Ainsi, pour pouvoir utiliser un "min-height: 100%" sur div#contenu, il nous
+	faut:
+	- un parent (body) en "height: 100%";
+	- le parent de body également en "height: 100%".
+
+2.	Il faut éviter que les marges des enfants de div#global ne se transmettent
+	à leur parent. Notamment, le margin-top du premier enfant (ici, div#entete),
+	et le margin-bottom du dernier enfant (ici, div#pied).
+	On évite ce problème grâce à la propriété CSS overflow, qui bloque la
+	fusion des marges. En savoir plus sur la fusion des marges:
+	http://web.covertprestige.info/test
+		04-blocs-imbriques-et-fusion-des-marges.html
+
+3.	Les marges automatiques à gauche et à droite permettent de centrer notre
+	bloc div#global, et donc tout le site.
+	Pour aligner div#global à gauche, on fera:
+		margin-left: 0;
+		margin-rigth: auto;
+	Pour aligner div#global à droite, on fera:
+		margin-left: auto;
+		margin-right: 0;
+	Pour aligner div#global à droite avec un retrait (à droite) de 100px:
+		margin-left: auto;
+		margin-right: 100px;
+
+*/
+

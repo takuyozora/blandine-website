@@ -1,0 +1,53 @@
+<div class="cadre_stage">
+	<div class="cadre_etat">
+		{% ifequal stage.state "Ok" %}
+			<div class="confirme">Confirmé</div>
+		{% endifequal %}
+		{% ifequal stage.state "Ca" %}
+			<div class="annule">Annulé</div>
+		{% endifequal %}
+		{% if stage.isFull %}
+			<div class="complet">Complet</div>
+		{% endif %}
+	</div>
+	{% ifnotequal stage.disciplines|length 0 %}
+		<div class="cadre_disciplines">
+			{% for discipline in stage.disciplines.all %}
+				{% if discipline.logo.url %}
+					<img src="{{ discipline.logo.url }}" alt="{{ discipline.name }}" />
+				{% endif %}
+			{% endfor %}
+		</div>
+	{% endifnotequal %}
+	<div class="cadre_contenu">
+		{% if stage.photo %}
+			<div class="cadre_photo">
+				<img src="{{ stage.photo.url }}" alt="Photo du stage" />
+			</div>
+		{% endif %}
+		<div class="cadre_infos">
+			<h2>
+				{{ stage.title }}
+			</h2>
+			{% if stage.showDates %}
+				<div class="cadre_dates">
+					<span class="date_stage">Dates du stages</span>
+					{{ stage.dates }}
+				</div>
+			{% endif %}
+			<br />
+			{% if stage.showPrices %}
+				<div class="cadre_prix">
+				<span class="date_stage">Prix du stages</span>
+					{{ stage.prices }}
+				</div>
+			{% endif %}
+		</div>
+		<div class="cadre_resume">
+			{{ stage.short }}
+		</div>
+	</div>
+	<div class="cadre_savoirplus">
+		<a href="/stages/voir/{{ stage.id }}" alt="En savoir plus sur ce stage">En savoir plus ...</a>
+	</div>
+</div>

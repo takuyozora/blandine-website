@@ -1,0 +1,71 @@
+{% extends "main/base.html" %}
+
+{% load staticfiles %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static "main/css/vue-stage.css" %}" media="screen" />
+{% endblock %}
+
+{% block page %}
+	<div id="retour_stages"><a href="/stages" alt="Retourner vers la liste des stages">Retourner aux stages</a></div>
+	<div class="cadre_stage">
+		<div class="cadre_entete">
+			<div class="cadre_etat">
+				{% ifequal stage.state "Ok" %}
+					<div class="confirme">Confirmé</div>
+				{% endifequal %}
+				{% ifequal stage.state "Ca" %}
+					<div class="annule">Annulé</div>
+				{% endifequal %}
+				{% if stage.isFull %}
+					<div class="complet">Complet</div>
+				{% endif %}
+			</div>
+			{% ifnotequal stage.disciplines|length 0 %}
+				<div class="cadre_disciplines">
+					{% for discipline in stage.disciplines.all %}
+						{% if discipline.logo.url %}
+							<img src="{{ discipline.logo.url }}" alt="{{ discipline.name }}" />
+						{% endif %}
+					{% endfor %}
+				</div>
+			{% endifnotequal %}
+			{% if stage.photo %}
+				<div class="cadre_photo">
+					<img src="{{ stage.photo.url }}" alt="Photo du stage" />
+				</div>
+			{% endif %}
+			<div class="cadre_infos">
+				<h2>
+					{{ stage.title }}
+				</h2>
+				{% if stage.showDates %}
+					<div class="cadre_dates">
+						<span class="date_stage">Dates du stages</span>
+						{{ stage.dates }}
+					</div>
+				{% endif %}
+				<br />
+				{% if stage.showPrices %}
+				<div class="cadre_prix">
+					<span class="date_stage">Prix du stages</span>
+					{{ stage.prices }}
+				</div>
+			{% endif %}
+			</div>
+		<br class="end"/>
+		</div>
+		<div id="description">
+			{% autoescape off %}
+				{{ stage.description }}
+			{% endautoescape %}
+		</div>
+		{% if not stage.showPrices %}
+			<div class="cadre_prix">
+				{{ stage.prices }}
+			</div>
+		{% endif %}
+
+		{{  stage.deleteTimer }}
+	</div>
+{% endblock %}
