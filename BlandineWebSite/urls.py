@@ -14,7 +14,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^/?$', main.views.home),
-    url(r'^symbiotonie/?$', main.views.symbio),
+    url(r'^antigym/?$', main.views.symbio),
     url(r'^contact/?$', main.views.contact),
     url(r'^psycho/?$', main.views.psycho),
     url(r'^stages/?$', main.views.stages),

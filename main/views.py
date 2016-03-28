@@ -29,7 +29,7 @@ def symbio(request):
     #     if len(day) is not 0:
     #         finalweek.append(day)
     context = {"groupes":week}
-    return render(request, 'main/symbio.html', context)
+    return render(request, 'main/antigym.html', context)
 
 
 def psycho(request):
