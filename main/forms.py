@@ -1,4 +1,5 @@
 from django.db.models import *
+from django import forms
 from ckeditor.widgets import CKEditorWidget
 from main.models import Stage
 
