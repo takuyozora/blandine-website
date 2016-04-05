@@ -1,0 +1,9 @@
+# Seront ignorés:
+.gitignore
+En\ Travaux
+django-*
+tinymce
+static/media/*
+static/tiny_mce
+media
+.idea
